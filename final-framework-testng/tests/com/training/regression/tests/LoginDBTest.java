@@ -5,16 +5,9 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import com.training.bean.LoginBean;
-import com.training.dao.ELearningDAO;
 import com.training.dataproviders.LoginDataProviders;
 import com.training.generics.GenericMethods;
 import com.training.generics.ScreenShot;
@@ -57,14 +50,10 @@ public class LoginDBTest {
 //		genericMethods.getElement("login", "id"); 
 				
 		loginPOM.sendUserName(userName);
-		
 		loginPOM.sendPassword(password);
 		loginPOM.clickLoginBtn();
-		
 		courseAssessment.courseAssessmentActivity();
-		
 		screenShot.captureScreenShot(userName);
-
 	}
 
 	@Test(priority=1)
